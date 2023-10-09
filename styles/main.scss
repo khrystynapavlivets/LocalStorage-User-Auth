@@ -1,0 +1,268 @@
+@import "./reset.css";
+@import "base/varible";
+@import "base/mixins";
+
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .container {
+    @include box(35%, 900px);
+    margin: 0px auto;
+    position: relative;
+
+    .loginForm {
+      .signIn {
+        @extend .registrationForm;
+
+        h1 {
+          @extend .signUp__head;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+          &::placeholder {
+            color: #505050;
+            font-size: $sizeFond;
+            font-weight: 500;
+            opacity: 0.5;
+          }
+          &:hover {
+            box-shadow: 0px 0px 8px 2px rgba(56, 136, 202, 0.638);
+          }
+
+          &:focus {
+            outline: 1px solid #3378d7e9;
+          }
+        }
+        .validEmpty {
+          @extend .valid-newEmail;
+        }
+        .validForm {
+          @extend .valid-newEmail;
+        }
+        .valid-newEmail {
+          @extend .valid;
+        }
+        .check-newEmail {
+          @extend .check;
+        }
+        .error-newEmail {
+          @extend .error;
+        }
+
+        &__btn {
+          @extend #signUpButton;
+        }
+
+        &__signUp {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .registrationForm {
+      margin: 136px auto;
+      min-height: 450px;
+      position: relative;
+
+      span {
+        display: none;
+        position: absolute;
+        top: 24px;
+        left: 21px;
+        font-size: 15px;
+        color: rgb(167, 165, 165);
+      }
+
+      .signUp__head {
+        font-size: 30px;
+        text-align: center;
+        margin: 15px;
+      }
+
+      .input {
+        position: relative;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          @include box(98%, 60px);
+          margin: 17px 5px;
+          padding: 1px 15px;
+          border: 1px solid #8f8c8ccd;
+          border-radius: 4px;
+          outline: none;
+          font-size: 17px;
+          &::placeholder {
+            color: #505050;
+            font-size: $sizeFond;
+            font-weight: 500;
+            opacity: 0.5;
+          }
+          &:hover {
+            box-shadow: 0px 0px 8px 2px rgba(56, 136, 202, 0.638);
+          }
+
+          &:focus {
+            outline: 1px solid #3378d7e9;
+          }
+        }
+      }
+
+      .signUp__alert {
+        @extend .valid;
+      }
+
+      .firstName input:focus::placeholder,
+      .lastName input:focus::placeholder,
+      .address input:focus::placeholder,
+      .passWord input:focus::placeholder {
+        font-size: 15px;
+        transform: translateY(-16px);
+        color: #505050;
+        transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+      }
+
+      #checkboxInput {
+        margin: 20px 10px 20px 7px;
+        @include box(20px, 20px);
+        &:active {
+          border: 2px solid #98c0eb;
+          box-shadow: 1px 1px 5px 0 #194f8a;
+        }
+      }
+
+      #checkboxInput + label {
+        font-size: 19px;
+        position: relative;
+        top: -3px;
+      }
+
+      #signUpButton {
+        @include box(98%, 42px);
+        margin: 22px 5px;
+        background-color: rgb(110, 155, 238);
+        border-radius: 4px;
+        color: $base-color;
+        font-size: $sizeFond;
+        border: 1px solid rgb(83, 134, 228);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(62, 104, 184);
+          border: 1px solid rgb(50, 92, 171);
+          box-shadow: 0px 0px 4px 1px rgb(109, 141, 200);
+        }
+
+        &:active {
+          background-color: rgb(73, 123, 217);
+          box-shadow: rgb(73, 123, 217) 0 0 0 1px inset,
+            rgb(73, 123, 217) 0 7px 16px 0, rgb(73, 123, 217) 0 3px 3px 0,
+            rgb(151, 177, 224) 0 0 1px 3px;
+        }
+      }
+      .signUp__signIn {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .profile {
+      text-align: center;
+      margin: 150px auto;
+      @include box(400px, 400px);
+      background-color: whitesmoke;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0px;
+
+      box-shadow: 1px 0px 19px 600px rgba(0, 0, 0, 0.464),
+        1px 0px 19px 5px rgba(0, 0, 0, 0.632);
+      .icon-block {
+        @include box(100%, 150px);
+        background-color: aquamarine;
+        padding: 20px 0;
+        border-radius: 4px;
+
+        .icons {
+          color: $base-color;
+          font-family: "Font Awesome 6 Pro";
+        }
+      }
+      .profileName {
+        font-size: 25px;
+        margin: 30px 0 20px;
+      }
+      .profilePosition {
+        margin: 20px 0;
+      }
+      .profil__block {
+        width: 50px;
+        border: 1px solid #8f8c8ccd;
+        margin: 0 auto;
+      }
+      #btn-second {
+        @include box(98%, 39px);
+        margin: 40px 0px;
+        background-color: rgb(236, 220, 77);
+        border-radius: 20px;
+        color: $base-color;
+        font-size: $sizeFond;
+        border: 1px solid rgb(234, 214, 32);
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(232, 215, 55);
+          border: 1px solid rgb(237, 218, 41);
+          box-shadow: 0px 0px 4px 1px rgb(227, 216, 112);
+        }
+
+        &:active {
+          background-color: rgb(236, 220, 77);
+          box-shadow: rgb(208, 198, 116) 0 0 0 1px inset,
+            rgb(217, 209, 142) 0 7px 16px 0, rgb(218, 210, 135) 0 3px 3px 0,
+            rgb(200, 193, 129) 0 0 1px 3px;
+        }
+      }
+    }
+
+    .valid {
+      @include box(270px, 30px);
+      background-color: #ea5453;
+      color: $base-color;
+      font-size: 15px;
+      font-weight: lighter;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 8px;
+      position: absolute;
+      top: 79px;
+      left: 4px;
+    }
+    .check {
+      background-image: url(./images/check.svg);
+      @include box(30px, 30px);
+      position: absolute;
+      top: 26px;
+      right: 15px;
+    }
+    .error {
+      background-image: url(./images/x.svg);
+      @include box(19px, 19px);
+      position: absolute;
+      top: 34px;
+      right: 21px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}

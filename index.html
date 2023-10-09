@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="loginForm hidden">
+            <form class="signIn" name="form1">
+                <h1 class="signIn__head">Please sign in</h1>
+                <div class="input">
+                    <span class="placeholder newEmail hidden">Email address</span>
+                    <input type="email" class="signIn__email" autocomplete="email" placeholder="Email address">
+                    <div class="valid valid-newEmail hidden">Please provide a valid Email address.</div>
+                    <div class="check check-newEmail hidden"></div>
+                    <div class="error error-newEmail hidden"></div>
+                </div>
+                <div class="input">
+                    <span class="placeholder newPass hidden">Password</span>
+                    <input type="password" class="signIn__password" autocomplete="current-password"
+                        placeholder="Password">
+                    <div class="valid valid-newPass hidden">Please provide a valid Password.</div>
+                    <div class="check check-newPass hidden"></div>
+                    <div class="error error-newPass hidden"></div>
+                    <p class="validEmpty hidden"> lockalstorege is empty</p>
+                    <p class="validForm hidden"> Incorrect email or password</p>
+                </div>
+                <input type="button" class="signIn__btn" value="signin">
+                <a class="signIn__signUp" href="#">Sign up now</a>
+            </form>
+        </div>
+
+
+        <div class="registrationForm ">
+            <form id="signUp" name="form2">
+                <h1 class="signUp__head">Please sign up</h1>
+                <div class="firstName input">
+                    <span class="placeholder first">First name</span>
+                    <input type="text" id="firstNameInput" placeholder="First name">
+                    <div class="valid valid-first hidden">Please provide a valid First name.</div>
+                    <div class="check check-first hidden"></div>
+                    <div class="error error-first hidden"></div>
+                </div>
+
+                <div class="lastName input">
+                    <span class="placeholder last">Last name</span>
+                    <input type="text" id="lastNameInput" placeholder="Last name">
+                    <div class="valid valid-last hidden">Please provide a valid Last name.</div>
+                    <div class="check check-last hidden"></div>
+                    <div class="error error-last hidden"></div>
+                </div>
+
+                <div class="address input">
+                    <span class="placeholder email">Email address</span>
+                    <input type="email" id="emailInput" autocomplete="email" placeholder="Email address">
+                    <div class="valid valid-email hidden">Please provide a valid Email address.</div>
+                    <div class="check check-email hidden"></div>
+                    <div class="error error-email hidden"></div>
+                    <p class="signUp__alert hidden">This email already exist </p>
+                </div>
+
+                <div class="passWord input">
+                    <span class="placeholder pass">Password</span>
+                    <input type="password" id="passwordInput" autocomplete="current-password" placeholder="Password">
+                    <div class="valid valid-pass hidden">Please provide a valid Password.</div>
+                    <div class="check check-pass hidden"></div>
+                    <div class="error error-pass hidden"></div>
+                </div>
+
+                <input type="checkbox" id="checkboxInput"><label for="checkboxInput">I argee with Privacy Policy
+                </label>
+
+                <button type="button" id="signUpButton" disabled>Sign Up</button>
+                <a class="signUp__signIn" href="#">Sign in now</a>
+            </form>
+        </div>
+
+
+
+        <div class="profile hidden">
+            <div class="icon-block">
+                <i class="fa-regular fa-user icons fa-7x"></i>
+            </div>
+            <div class="profileName"></div>
+            <div class="profileEmail"></div>
+            <div class="profilePosition">Designer & Web Developing</div>
+            <div class="profil__block"></div>
+            <input type="submit" id="btn-second" value="Sign up">
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/8fc6cedac4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

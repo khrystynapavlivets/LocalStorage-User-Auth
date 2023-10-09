@@ -1,0 +1,311 @@
+@import "./reset.css";
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .container {
+  width: 35%;
+  height: 900px;
+  margin: 0px auto;
+  position: relative;
+}
+body .container .loginForm .signIn input[type="email"]::-moz-placeholder,
+body .container .loginForm .signIn input[type="password"]::-moz-placeholder {
+  color: #505050;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+body .container .loginForm .signIn input[type="email"]::placeholder,
+body .container .loginForm .signIn input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+body .container .loginForm .signIn input[type="email"]:hover,
+body .container .loginForm .signIn input[type="password"]:hover {
+  box-shadow: 0px 0px 8px 2px rgba(56, 136, 202, 0.638);
+}
+body .container .loginForm .signIn input[type="email"]:focus,
+body .container .loginForm .signIn input[type="password"]:focus {
+  outline: 1px solid rgba(51, 120, 215, 0.9137254902);
+}
+body .container .loginForm .signIn__signUp {
+  text-decoration: none;
+}
+body .container .loginForm .signIn__signUp:hover {
+  text-decoration: underline;
+}
+body .container .registrationForm,
+body .container .loginForm .signIn {
+  margin: 136px auto;
+  min-height: 450px;
+  position: relative;
+}
+body .container .registrationForm span,
+body .container .loginForm .signIn span {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 21px;
+  font-size: 15px;
+  color: rgb(167, 165, 165);
+}
+body .container .registrationForm .signUp__head,
+body .container .loginForm .signIn .signUp__head,
+body .container .loginForm .signIn h1 {
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+body .container .registrationForm .input,
+body .container .loginForm .signIn .input {
+  position: relative;
+}
+body .container .registrationForm .input input[type="text"],
+body .container .loginForm .signIn .input input[type="text"],
+body .container .registrationForm .input input[type="email"],
+body .container .loginForm .signIn .input input[type="email"],
+body .container .registrationForm .input input[type="password"],
+body .container .loginForm .signIn .input input[type="password"] {
+  width: 98%;
+  height: 60px;
+  margin: 17px 5px;
+  padding: 1px 15px;
+  border: 1px solid rgba(143, 140, 140, 0.8039215686);
+  border-radius: 4px;
+  outline: none;
+  font-size: 17px;
+}
+body .container .registrationForm .input input[type="text"]::-moz-placeholder,
+body .container .loginForm .signIn .input input[type="text"]::-moz-placeholder,
+body .container .registrationForm .input input[type="email"]::-moz-placeholder,
+body .container .loginForm .signIn .input input[type="email"]::-moz-placeholder,
+body
+  .container
+  .registrationForm
+  .input
+  input[type="password"]::-moz-placeholder,
+body
+  .container
+  .loginForm
+  .signIn
+  .input
+  input[type="password"]::-moz-placeholder {
+  color: #505050;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+body .container .registrationForm .input input[type="text"]::placeholder,
+body .container .loginForm .signIn .input input[type="text"]::placeholder,
+body .container .registrationForm .input input[type="email"]::placeholder,
+body .container .loginForm .signIn .input input[type="email"]::placeholder,
+body .container .registrationForm .input input[type="password"]::placeholder,
+body .container .loginForm .signIn .input input[type="password"]::placeholder {
+  color: #505050;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+body .container .registrationForm .input input[type="text"]:hover,
+body .container .loginForm .signIn .input input[type="text"]:hover,
+body .container .registrationForm .input input[type="email"]:hover,
+body .container .loginForm .signIn .input input[type="email"]:hover,
+body .container .registrationForm .input input[type="password"]:hover,
+body .container .loginForm .signIn .input input[type="password"]:hover {
+  box-shadow: 0px 0px 8px 2px rgba(56, 136, 202, 0.638);
+}
+body .container .registrationForm .input input[type="text"]:focus,
+body .container .loginForm .signIn .input input[type="text"]:focus,
+body .container .registrationForm .input input[type="email"]:focus,
+body .container .loginForm .signIn .input input[type="email"]:focus,
+body .container .registrationForm .input input[type="password"]:focus,
+body .container .loginForm .signIn .input input[type="password"]:focus {
+  outline: 1px solid rgba(51, 120, 215, 0.9137254902);
+}
+body .container .registrationForm .firstName input:focus::-moz-placeholder,
+body .container .loginForm .signIn .firstName input:focus::-moz-placeholder,
+body .container .registrationForm .lastName input:focus::-moz-placeholder,
+body .container .loginForm .signIn .lastName input:focus::-moz-placeholder,
+body .container .registrationForm .address input:focus::-moz-placeholder,
+body .container .loginForm .signIn .address input:focus::-moz-placeholder,
+body .container .registrationForm .passWord input:focus::-moz-placeholder,
+body .container .loginForm .signIn .passWord input:focus::-moz-placeholder {
+  font-size: 15px;
+  transform: translateY(-16px);
+  color: #505050;
+  -moz-transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+body .container .registrationForm .firstName input:focus::placeholder,
+body .container .loginForm .signIn .firstName input:focus::placeholder,
+body .container .registrationForm .lastName input:focus::placeholder,
+body .container .loginForm .signIn .lastName input:focus::placeholder,
+body .container .registrationForm .address input:focus::placeholder,
+body .container .loginForm .signIn .address input:focus::placeholder,
+body .container .registrationForm .passWord input:focus::placeholder,
+body .container .loginForm .signIn .passWord input:focus::placeholder {
+  font-size: 15px;
+  transform: translateY(-16px);
+  color: #505050;
+  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+body .container .registrationForm #checkboxInput,
+body .container .loginForm .signIn #checkboxInput {
+  margin: 20px 10px 20px 7px;
+  width: 20px;
+  height: 20px;
+}
+body .container .registrationForm #checkboxInput:active,
+body .container .loginForm .signIn #checkboxInput:active {
+  border: 2px solid #98c0eb;
+  box-shadow: 1px 1px 5px 0 #194f8a;
+}
+body .container .registrationForm #checkboxInput + label,
+body .container .loginForm .signIn #checkboxInput + label {
+  font-size: 19px;
+  position: relative;
+  top: -3px;
+}
+body .container .registrationForm #signUpButton,
+body .container .loginForm .signIn #signUpButton,
+body .container .registrationForm .loginForm .signIn__btn,
+body .container .loginForm .registrationForm .signIn__btn,
+body .container .loginForm .signIn .signIn__btn {
+  width: 98%;
+  height: 42px;
+  margin: 22px 5px;
+  background-color: rgb(110, 155, 238);
+  border-radius: 4px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(83, 134, 228);
+  cursor: pointer;
+}
+body .container .registrationForm #signUpButton:hover,
+body .container .loginForm .signIn #signUpButton:hover,
+body .container .registrationForm .loginForm .signIn__btn:hover,
+body .container .loginForm .registrationForm .signIn__btn:hover,
+body .container .loginForm .signIn .signIn__btn:hover {
+  background-color: rgb(62, 104, 184);
+  border: 1px solid rgb(50, 92, 171);
+  box-shadow: 0px 0px 4px 1px rgb(109, 141, 200);
+}
+body .container .registrationForm #signUpButton:active,
+body .container .loginForm .signIn #signUpButton:active,
+body .container .registrationForm .loginForm .signIn__btn:active,
+body .container .loginForm .registrationForm .signIn__btn:active,
+body .container .loginForm .signIn .signIn__btn:active {
+  background-color: rgb(73, 123, 217);
+  box-shadow: rgb(73, 123, 217) 0 0 0 1px inset, rgb(73, 123, 217) 0 7px 16px 0,
+    rgb(73, 123, 217) 0 3px 3px 0, rgb(151, 177, 224) 0 0 1px 3px;
+}
+body .container .registrationForm .signUp__signIn,
+body .container .loginForm .signIn .signUp__signIn {
+  text-decoration: none;
+}
+body .container .registrationForm .signUp__signIn:hover,
+body .container .loginForm .signIn .signUp__signIn:hover {
+  text-decoration: underline;
+}
+body .container .profile {
+  text-align: center;
+  margin: 150px auto;
+  width: 400px;
+  height: 400px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  box-shadow: 1px 0px 19px 600px rgba(0, 0, 0, 0.464),
+    1px 0px 19px 5px rgba(0, 0, 0, 0.632);
+}
+body .container .profile .icon-block {
+  width: 100%;
+  height: 150px;
+  background-color: aquamarine;
+  padding: 20px 0;
+  border-radius: 4px;
+}
+body .container .profile .icon-block .icons {
+  color: white;
+  font-family: "Font Awesome 6 Pro";
+}
+body .container .profile .profileName {
+  font-size: 25px;
+  margin: 30px 0 20px;
+}
+body .container .profile .profilePosition {
+  margin: 20px 0;
+}
+body .container .profile .profil__block {
+  width: 50px;
+  border: 1px solid rgba(143, 140, 140, 0.8039215686);
+  margin: 0 auto;
+}
+body .container .profile #btn-second {
+  width: 98%;
+  height: 39px;
+  margin: 40px 0px;
+  background-color: rgb(236, 220, 77);
+  border-radius: 20px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(234, 214, 32);
+  cursor: pointer;
+}
+body .container .profile #btn-second:hover {
+  background-color: rgb(232, 215, 55);
+  border: 1px solid rgb(237, 218, 41);
+  box-shadow: 0px 0px 4px 1px rgb(227, 216, 112);
+}
+body .container .profile #btn-second:active {
+  background-color: rgb(236, 220, 77);
+  box-shadow: rgb(208, 198, 116) 0 0 0 1px inset,
+    rgb(217, 209, 142) 0 7px 16px 0, rgb(218, 210, 135) 0 3px 3px 0,
+    rgb(200, 193, 129) 0 0 1px 3px;
+}
+body .container .valid,
+body .container .loginForm .signIn .valid-newEmail,
+body .container .loginForm .signIn .validEmpty,
+body .container .loginForm .signIn .validForm,
+body .container .registrationForm .signUp__alert,
+body .container .loginForm .signIn .signUp__alert {
+  width: 270px;
+  height: 30px;
+  background-color: #ea5453;
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 79px;
+  left: 4px;
+}
+body .container .check,
+body .container .loginForm .signIn .check-newEmail {
+  background-image: url(./images/check.svg);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 26px;
+  right: 15px;
+}
+body .container .error,
+body .container .loginForm .signIn .error-newEmail {
+  background-image: url(./images/x.svg);
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 34px;
+  right: 21px;
+}
+body .container .hidden {
+  display: none;
+} /*# sourceMappingURL=main.css.map */
